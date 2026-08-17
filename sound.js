@@ -390,17 +390,14 @@ function playEnemyDeathSound() {
 
 function playSlideSound() {
 
-    if (
-        !GAME_SETTINGS.sound
-    ) {
+    if (!GAME_SETTINGS.sound) {
         return;
     }
-
 
     createSound(
         120,
         0.25,
-        "noise",
+        "sawtooth",
         0.08
     );
 }
