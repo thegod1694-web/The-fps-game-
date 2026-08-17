@@ -608,8 +608,10 @@ function playerJump() {
     playerVelocityY =
         PLAYER.jumpPower;
 
-    playerOnGround =
-        false;
+    playerOnGround = false;
+   if (typeof playJumpSound === "function") {
+    playJumpSound();
+   }
 }
 
 
