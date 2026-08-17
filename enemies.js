@@ -573,7 +573,18 @@ function damageEnemy(
 
     enemy.userData.health -= damage;
 
+    if (enemy.userData.health > 0) {
 
+    if (typeof playEnemyHitSound === "function") {
+        playEnemyHitSound();
+    }
+
+} else {
+
+    if (typeof playEnemyDeathSound === "function") {
+        playEnemyDeathSound();
+    }
+    }
     /*
        Hit flash
     */
