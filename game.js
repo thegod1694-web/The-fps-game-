@@ -452,6 +452,9 @@ function damagePlayer(
 
     playerHealth -= amount;
 
+    if (typeof playDamageSound === "function") {
+    playDamageSound();
+    }
 
     if (playerHealth < 0) {
 
