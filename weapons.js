@@ -313,6 +313,10 @@ function reloadWeapon() {
 
     if (weaponReloading) return;
 
+    if (typeof playReloadSound === "function") {
+        playReloadSound();
+    }
+
     const weapon = getCurrentWeapon();
 
     /*
